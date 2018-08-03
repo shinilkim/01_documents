@@ -1,2 +1,26 @@
 # ALM(Application Lifecycle Management)
-http://www.gitblit.com/
+
+1. 로컬 ALM 디렉토리 구성
+ - /home/ALM/gitblit-1.8.0
+
+2.1. 형상관리 GIT 서버
+ - 홈페이지 : http://www.gitblit.com
+ - 좌측상단 버튼 : 'Download Gitblit GO' 클릭하여 다운로드 압축해제
+ - 압축해제 디렉토리 : /home/ALM/gitblit-1.8.0
+ - 서버 구동 : /home/ALM/gitblit-1.8.0/gitblit.cmd
+ - 접속 : https://localhost:8443
+ - 기본계정 : admin/admin
+
+2.2. 형상관리 Svn 서버
+ - 홈페이지 : https://www.visualsvn.com/server/download/
+ - 다운로드 : visual svn server
+ - https://localhost/!/#svn-test
+ 
+3. 자바 빌드 도구 Maven
+ - 홈페이지 : http://maven.apache.org/download.cgi
+ - 다운로드 : apache-maven-3.5.4-bin.zip
+ - 압축해제 : /home/ALM/apache-maven-3.5.4
+ - 시스템 변수 등록 : MAVEN_HOME > C:\home\ALM\apache-maven-3.5.4
+ - 시스템 Path 등록 : C:\home\ALM\apache-maven-3.5.4\bin
+ - cmd 창을 오픈하여 정상적으로 설정이 되었는지 확인 : mnv -version
+ - 테스트 : mvn archetype:generate -DgroupId=kr.godev.opensource -DartifactId=my_project -DinteractiveMode=false
